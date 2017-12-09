@@ -1,0 +1,63 @@
+# CONFIGS
+config defaultToCurrentScreen true
+config secondsBetweenRepeat 0.2
+
+# MONITOR ALIASES
+alias laptopMonitor 1680x1050
+alias mainMonitor 2560x1600
+
+# BASIC POSITION ALIASES
+alias full move		screenOriginX;screenOriginY			screenSizeX;screenSizeY
+alias left move		screenOriginX;screenOriginY			screenSizeX/2;screenSizeY
+alias right move	screenOriginX+screenSizeX/2;screenOriginY	screenSizeX/2;screenSizeY
+alias top move		screenOriginX;screenOriginY			screenSizeX;screenSizeY/2
+alias bottom move	screenOriginX;screenOriginY+screenSizeY/2	screenSizeX;screenSizeY/2
+
+# CORNER POSITION ALIASES 
+alias topLeft move	screenOriginX;screenOriginY			screenSizeX/2;screenSizeY/2
+alias topRight move	screenOriginX+screenSizeX/2;screenOriginY	screenSizeX/2;screenSizeY/2
+alias bottomLeft move	screenOriginX;screenOriginY+screenSizeY/2	screenSizeX/2;screenSizeY/2
+alias bottomRight move	screenOriginX+screenSizeX/2;screenOriginY+screenSizeY/2		screenSizeX/2;screenSizeY/2
+
+# ADVANCED POSITION ALIASES
+alias farLeft move 	screenOriginX;screenOriginY			screenSizeX/3;screenSizeY
+alias center move	screenOriginX+screenSizeX/3;screenOriginY	screenSizeX/3;screenSizeY
+alias farRight move	screenOriginX+2*screenSizeX/3;screenOriginY	screenSizeX/3;screenSizeY
+
+# MAIN BINDINGS
+bind f:ctrl;cmd ${full}
+bind left:ctrl;cmd chain ${left} | ${farLeft}
+bind right:ctrl;cmd chain ${right} | ${farRight}
+bind up:ctrl;cmd chain ${top} | ${center}
+bind down:ctrl;cmd ${bottom}
+# bind left;up:ctrl;cmd ${topLeft}
+# bind right;up:ctrl;cmd ${topRight}
+# bind left;down:ctrl;cmd ${bottomLeft}
+# bind right;down:ctrl;cmd ${bottomRight}
+
+# VIM BINDINGS
+bind h:ctrl;cmd chain ${left} | ${farLeft}
+bind l:ctrl;cmd chain ${right} | ${farRight}
+bind k:ctrl;cmd chain ${top} | ${center}
+bind j:ctrl;cmd ${bottom}
+bind y:ctrl;cmd ${topRight}
+bind u:ctrl;cmd ${topLeft}
+bind n:ctrl;cmd ${bottomLeft}
+bind m:ctrl;cmd ${bottomRight} 
+
+# THROW BINDINGS 
+bind right:ctrl;alt;cmd throw right resize
+bind left:ctrl;alt;cmd  throw left  resize
+# bind up:ctrl;alt;cmd    throw up    resize
+# bind down:ctrl;alt;cmd  throw down  resize
+
+# FOCUS BINDINGDS
+bind right:cmd    focus right
+bind left:cmd     focus left
+bind up:cmd       focus up
+bind down:cmd     focus down
+bind up:cmd;alt   focus behind
+bind down:cmd;alt focus behind
+
+# HINTS
+bind esc:cmd hint

@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Users/aolesky/.zprezto'
+let g:netrw_dirhist_2='/Users/aolesky/.dotfiles'
+let g:netrw_dirhist_3='/Users/aolesky/.atom'
+let g:netrw_dirhist_4='/Users/aolesky/.config'
+let g:netrw_dirhist_5='/Users/aolesky/.zprezto'
+let g:netrw_dirhist_6='/Users/aolesky/.dotfiles/zprezto/.zprezto'
+let g:netrw_dirhist_7='/Users/aolesky/.dotfiles/bash/.bash_sessions'

@@ -1,0 +1,1 @@
+/Users/aolesky/.zprezto/runcoms/zlogout
